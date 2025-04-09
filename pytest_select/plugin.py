@@ -101,6 +101,8 @@ def pytest_collection_modifyitems(session, config, items):
 
         # Slice assignment is required since `items` needs to be modified in place
         items[:] = selected_items
+        print("select selected items")
+        print(items)
         config.hook.pytest_deselected(items=deselected_items)
 
 
